@@ -191,7 +191,7 @@ input[type=color]{width:44px;height:34px;padding:0;border:1px solid var(--line);
 .doc .cap{margin-bottom:6px}
 .doc .mock{background:var(--m-bg);color:var(--m-ink);font-family:var(--m-body);border:1px solid var(--d-ink);border-radius:8px;overflow:hidden;font-size:13px;line-height:1.4;min-width:520px}
 .doc .mock.phone{min-width:0;width:250px;border-radius:22px;border-width:5px;font-size:12px}
-.doc .m-blk{position:relative;padding:26px 28px;border-top:1px dashed color-mix(in srgb,var(--m-ink) 22%,transparent)}
+.doc .m-blk{position:relative;padding:26px 28px;border-top:1px dashed rgba(128,128,128,0.22)}
 .doc .m-blk:first-child{border-top:0}
 .doc .phone .m-blk{padding:18px 14px}
 .doc .m-tag{position:absolute;top:4px;right:6px;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.55}
@@ -208,18 +208,18 @@ input[type=color]{width:44px;height:34px;padding:0;border:1px solid var(--line);
 .doc .phone .m-h1{font-size:21px}
 .doc .m-h2{font-size:17px;margin-bottom:12px}
 .doc .m-sub{opacity:.75;margin-top:8px;max-width:44ch}
-.doc .m-bar{height:7px;border-radius:4px;background:color-mix(in srgb,var(--m-ink) 15%,transparent);margin-top:7px}
+.doc .m-bar{height:7px;border-radius:4px;background:rgba(128,128,128,0.15);margin-top:7px}
 .doc .m-bar.s{width:60%}
 .doc .m-btn{display:inline-block;background:var(--m-primary);color:var(--m-primary-fg);border-radius:var(--m-r);padding:7px 14px;font-weight:600;font-size:12px;white-space:nowrap}
 .doc .m-btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
 .doc .m-acts{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.doc .m-img{background:repeating-linear-gradient(135deg,var(--m-tint) 0 10px,color-mix(in srgb,var(--m-tint) 70%,var(--m-ink)) 10px 11px);border-radius:var(--m-rc);min-height:90px;display:flex;align-items:center;justify-content:center;font-family:"DM Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.doc .m-img{background:repeating-linear-gradient(135deg,var(--m-tint) 0 10px,var(--m-tint) 10px 11px);border-radius:var(--m-rc);min-height:90px;display:flex;align-items:center;justify-content:center;font-family:"DM Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
 .doc .m-img span{background:var(--m-bg);padding:2px 6px;border-radius:3px}
 .doc .m-split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
 .doc .m-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .doc .phone .m-split,.doc .phone .m-grid{grid-template-columns:1fr}
 .doc .phone .m-grid>*:nth-child(n+3){display:none}
-.doc .m-card{background:var(--m-surface);border:1px solid color-mix(in srgb,var(--m-ink) 14%,transparent);border-radius:var(--m-rc);padding:12px}
+.doc .m-card{background:var(--m-surface);border:1px solid rgba(128,128,128,0.14);border-radius:var(--m-rc);padding:12px}
 .doc .m-card b{font-family:var(--m-head)}
 .doc .m-center{text-align:center}
 .doc .m-center .m-sub{margin-left:auto;margin-right:auto}
@@ -227,13 +227,13 @@ input[type=color]{width:44px;height:34px;padding:0;border:1px solid var(--line);
 .doc .m-band{background:var(--m-primary);color:var(--m-primary-fg)}
 .doc .m-band .m-btn{background:var(--m-primary-fg);color:var(--m-primary)}
 .doc .m-tinted{background:var(--m-tint)}
-.doc .m-cover{background:linear-gradient(color-mix(in srgb,var(--m-ink) 55%,transparent),color-mix(in srgb,var(--m-ink) 55%,transparent)),repeating-linear-gradient(135deg,var(--m-tint) 0 10px,var(--m-primary) 10px 11px);color:#fff;padding-top:48px;padding-bottom:48px}
+.doc .m-cover{background:linear-gradient(rgba(128,128,128,0.55),rgba(128,128,128,0.55)),repeating-linear-gradient(135deg,var(--m-tint) 0 10px,var(--m-primary) 10px 11px);color:#fff;padding-top:48px;padding-bottom:48px}
 .doc .m-num{font-family:var(--m-head);font-weight:700;font-size:24px;color:var(--m-primary)}
 .doc .m-dot{width:26px;height:26px;border-radius:50%;background:var(--m-primary);color:var(--m-primary-fg);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
-.doc .m-pill{height:22px;border-radius:var(--m-r);background:color-mix(in srgb,var(--m-ink) 12%,transparent);flex:1}
+.doc .m-pill{height:22px;border-radius:var(--m-r);background:rgba(128,128,128,0.12);flex:1}
 .doc .m-rowf{display:flex;gap:10px;align-items:center}
-.doc .m-input{flex:1;height:30px;border:1.5px solid color-mix(in srgb,var(--m-ink) 35%,transparent);border-radius:var(--m-r);margin-top:8px}
-.doc .m-acc{display:flex;justify-content:space-between;border-bottom:1px solid color-mix(in srgb,var(--m-ink) 20%,transparent);padding:8px 0}
+.doc .m-input{flex:1;height:30px;border:1.5px solid rgba(128,128,128,0.35);border-radius:var(--m-r);margin-top:8px}
+.doc .m-acc{display:flex;justify-content:space-between;border-bottom:1px solid rgba(128,128,128,0.20);padding:8px 0}
 .doc .m-foot{font-size:11px;opacity:.8;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
 .doc .pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
@@ -637,7 +637,8 @@ app.addEventListener("click",async e=>{
     if(!el||!window.html2canvas||!window.jspdf){msg="The PDF tools did not load. Check your connection and try again.";msgErr=true;touch();render(true);return}
     b.disabled=true;msg="Building PDF…";msgErr=false;
     try{
-      const cv=await html2canvas(el,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false});
+      const sc=Math.max(1,Math.min(2,Math.sqrt(12e6/(el.scrollWidth*el.scrollHeight))));
+      const cv=await html2canvas(el,{scale:sc,windowWidth:document.documentElement.clientWidth,backgroundColor:"#ffffff",useCORS:true,logging:false});
       const pdf=new window.jspdf.jsPDF({unit:"pt",format:"a4"});
       const PW=pdf.internal.pageSize.getWidth(),PH=pdf.internal.pageSize.getHeight(),M=28;
       const cw=PW-2*M,ch=PH-2*M,k=cw/cv.width,sliceH=Math.floor(ch/k);
@@ -650,7 +651,7 @@ app.addEventListener("click",async e=>{
       }
       const fn=((a.name||"website").trim().replace(/[^\w\- ]+/g,"").replace(/\s+/g,"-")||"website")+"-ui-brief.pdf";
       await dl.save({filename:fn,data:pdf.output("arraybuffer")});msg="Saved "+fn+".";msgErr=false;
-    }catch(err){const c=err&&err.code;if(c==="declined"){msg="";msgErr=false}else if(c==="rate_limited"){msg="A download prompt is already open. Try again in a moment.";msgErr=true}else{msg="The PDF could not be saved in this view. Copy the text instead.";msgErr=true}}
+    }catch(err){const c=err&&err.code;if(c==="declined"){msg="";msgErr=false}else if(c==="rate_limited"){msg="A download prompt is already open. Try again in a moment.";msgErr=true}else{msg="The PDF could not be created ("+((err&&(err.message||err.code))||"unknown error")+"). Try again, or copy the text.";msgErr=true;console.error(err)}}
   }
   else if(d.act==="download"){
     if(!dl)return;
