@@ -638,7 +638,8 @@ app.addEventListener("click",async e=>{
     b.disabled=true;msg="Building PDF…";msgErr=false;
     try{
       const sc=Math.max(1,Math.min(2,Math.sqrt(12e6/(el.scrollWidth*el.scrollHeight))));
-      const cv=await html2canvas(el,{scale:sc,windowWidth:document.documentElement.clientWidth,backgroundColor:"#ffffff",useCORS:true,logging:false});
+      const sx=window.scrollX,sy=window.scrollY;window.scrollTo(0,0);
+      let cv;try{cv=await html2canvas(el,{scale:sc,scrollX:0,scrollY:0,x:0,y:0,windowWidth:document.documentElement.clientWidth,backgroundColor:"#ffffff",useCORS:true,logging:false});}finally{window.scrollTo(sx,sy)}
       const pdf=new window.jspdf.jsPDF({unit:"pt",format:"a4"});
       const PW=pdf.internal.pageSize.getWidth(),PH=pdf.internal.pageSize.getHeight(),M=28;
       const cw=PW-2*M,ch=PH-2*M,k=cw/cv.width,sliceH=Math.floor(ch/k);
