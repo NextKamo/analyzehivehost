@@ -664,11 +664,16 @@ app.addEventListener("click",async e=>{
 });
 
 /* ---------- boot ---------- */
+const fallbackDl={save({filename,data}){return new Promise((res,rej)=>{try{
+  const ext=(filename.split(".").pop()||"").toLowerCase(),mime=ext==="pdf"?"application/pdf":ext==="html"?"text/html;charset=utf-8":"application/octet-stream";
+  const url=URL.createObjectURL(new Blob([data],{type:mime})),a=document.createElement("a");
+  a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);res({status:"saved"})}catch(e){rej(e)}})}};
 function start(data){
   if(data&&data.a){S=data;S.a=Object.assign(defaults(),S.a)}else load();
+  dl=fallbackDl;
   render();
   if(window.claude&&typeof window.claude.use==="function"){
-    window.claude.use("downloads").then(n=>{dl=n||null;if(S.step>N)render(true)}).catch(()=>{});
+    window.claude.use("downloads").then(n=>{dl=n||fallbackDl;if(S.step>N)render(true)}).catch(()=>{});
   }
 }
 try{window.claude&&window.claude.hot&&window.claude.hot.snapshot&&window.claude.hot.snapshot(()=>S)}catch(e){}
